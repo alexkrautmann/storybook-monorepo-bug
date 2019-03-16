@@ -20,8 +20,8 @@ module.exports = withBundleAnalyzer(
       withTranspileModules({
         transpileModules: ['@chatapp'],
         babelConfigFile: path.resolve('../../babel.config.js'),
-        analyzeServer: true,
-        analyzeBrowser: true,
+        analyzeServer: process.env.NODE_ENV === 'production',
+        analyzeBrowser: process.env.NODE_ENV === 'production',
         // analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
         // analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
         bundleAnalyzerConfig: {
@@ -39,7 +39,6 @@ module.exports = withBundleAnalyzer(
         webpack(config, { dev, isServer }) {
           // Do not run type checking twice:
           // if (isServer) config.plugins.push(new ForkTsCheckerWebpackPlugin())
-
           if (!dev) {
             config.plugins.push(
               isServer ? new StatsPlugin('../../reports/webpack/server/stats.json') : new StatsPlugin('../reports/webpack/client/stats.json'),

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-const Text = styled.span`
+const Text = styled.div`
   color: red;
   font-weight: bold;
 `;
