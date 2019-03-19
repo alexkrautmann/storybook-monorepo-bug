@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components/primitives'
 import {View} from "react-primitives";
+import {foo} from "@chatapp/foo";
 
 const Outer = styled.Text`
   color: blue;
@@ -11,4 +12,8 @@ const Inner = styled.Text`
   color: green;
 `;
 
-export const Biz = () => <View><Outer>biz <Inner>baz</Inner></Outer></View>
+const Innerer = styled.Text`
+  color: magenta;
+`;
+
+export const Biz = () => <View><Outer>biz <Inner>baz <Innerer>{foo}</Innerer></Inner></Outer></View>

@@ -1,9 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "noEmit": true,
     "baseUrl": "./",
     "paths": {
-      "@chatapp/*": ["./packages/*/src"]
+      "@chatapp/*": ["packages/*/src"],
+//      "*": ["node_modules", "packages"]
     },
 
     "target": "es5",
@@ -13,6 +15,14 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "lib": ["dom", "es7"]
-  }
+    "lib": ["es7"]
+  },
+  "include": ["packages"],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/**/*",
+    "**/node_modules/*",
+    // TODO: temp disable tsc for native app
+    "packages/native-app"
+  ]
 }

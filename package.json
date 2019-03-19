@@ -1,13 +1,17 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "scripts": {
-    "dev": "yarn --cwd packages/web-app dev",
-    "build": "yarn --cwd packages/web-app build",
-    "start": "yarn --cwd packages/web-app start",
-    "clean": "rimraf packages/*/node_modules yarn.lock"
+    "web:dev": "yarn --cwd packages/web-app dev",
+    "web:build": "yarn --cwd packages/web-app build",
+    "web:start": "yarn --cwd packages/web-app start",
+    "native:start": "yarn --cwd packages/native-app start",
+    "native:run:android": "yarn --cwd packages/native-app run:android",
+    "clean": "rimraf packages/*/node_modules yarn.lock && yarn --cwd packages/native-app watchman:clean"
   },
   "devDependencies": {
     "rimraf": "^2.6.3"
