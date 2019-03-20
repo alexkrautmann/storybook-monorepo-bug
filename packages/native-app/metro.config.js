@@ -178,12 +178,14 @@ module.exports = {
     extraNodeModules,
     "sourceExts": [
       "js",
+      "jsx",
       "json",
       "ts",
       "tsx",
       "css",
       "scss"
-    ]
+    ],
+    enableVisualizer: true
   },
   "transformer": {
     "babelTransformerPath": "react-native-ueno-css-modules/transformer"

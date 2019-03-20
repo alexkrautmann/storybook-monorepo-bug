@@ -3,6 +3,7 @@ import {foo} from '@chatapp/foo'
 import {Bar} from '@chatapp/bar'
 import styled from 'styled-components'
 import {Biz} from "@chatapp/biz";
+import {Spaghet} from "../components/spaghet";
 
 const Container = styled.div`
   display: flex;
@@ -28,6 +29,10 @@ export default () => (
       <Item>
           Imported primitives .tsx file
           <Biz />
+      </Item>
+      <Item>
+          Imported from nested .tsx file
+          <Spaghet />
       </Item>
   </Container>
 

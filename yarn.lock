@@ -8966,9 +8966,9 @@ react-native-firebase@5.2.3:
     prop-types "^15.6.2"
 
 react-native-navigation@*:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.14.0.tgz#d453dc92031ffaf7951f741a733bdc969a1670ea"
-  integrity sha512-xfBnEjQDlH6AXgDIw+a917n/AUDKQJ72Bnro0zXHdHHd4Ty8s5AfF8jhfH/9MHmKWAJxl+uHy1JX7Xt25v5hxg==
+  version "2.13.2"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.13.2.tgz#0a73f7a38e2f832d68516237dadba40604dc5d6e"
+  integrity sha512-Xwhxo/lL3QJZsr+5dfTYhGpSySPymkQXVfBwW0oKsUL7NAIEl/yN7p+qUkGV/YAH0EeMRaL8TywIzFaNXAl9gw==
   dependencies:
     hoist-non-react-statics "3.x.x"
     lodash "4.17.x"
