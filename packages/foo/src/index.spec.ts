@@ -1,6 +1,6 @@
 import { foo } from './'
 
-describe('biz', () => {
+describe('foo', () => {
     it('exists', async () => {
         expect(foo).toEqual('foo');
     });

@@ -1,14 +1,6 @@
-const {getBabelConfig} = require('../../getBabelConfig');
+const { getBabelConfig2 } = require('../../tools/getBabelConfig');
 
 module.exports = function(api) {
   api.cache(true);
-
-  const config = getBabelConfig(__dirname);
-
-  config.presets.push('@babel/preset-react');
-  config.presets.push('@babel/preset-env');
-  //
-  // config.plugins.push('styled-components');
-
-  return config;
+  return getBabelConfig2({ babelTarget: 'library' });
 };

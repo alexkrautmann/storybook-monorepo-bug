@@ -2,11 +2,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "noEmit": true,
-    "baseUrl": "./",
-    "paths": {
-      "@chatapp/*": ["packages/*/src"]
-//      "*": ["node_modules", "packages"]
-    },
+    "sourceMap": true,
+    "declarationMap": true,
+    "declaration": true,
     "target": "es5",
     "module": "commonjs",
     "jsx": "react",
