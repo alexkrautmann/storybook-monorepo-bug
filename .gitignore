@@ -18,5 +18,8 @@ node_modules/
 # Next.js
 .next
 
-### Idea ###
-.idea
+# Idea
+.idea/
+
+# package dist
+dist/
