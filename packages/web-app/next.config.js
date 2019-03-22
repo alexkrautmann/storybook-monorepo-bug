@@ -21,7 +21,7 @@ module.exports = withBundleAnalyzer(
         '@chatapp',
         // TODO: this is a hack to get around clashes between next-transpile-modules and babel-plugin-module-resolver
         //       https://github.com/martpie/next-transpile-modules/issues/21
-        '\.\./.+/src/.+\.tsx?'
+        // '\.\./.+/src/.+\.tsx?'
       ],
       analyzeServer: process.env.NODE_ENV === 'production',
       analyzeBrowser: process.env.NODE_ENV === 'production',
@@ -48,19 +48,32 @@ module.exports = withBundleAnalyzer(
           );
         }
 
+        config.resolve.extensions = [
+          '.ts',
+          '.tsx',
+          '.wasm',
+          '.mjs',
+          '.js',
+          '.jsx',
+          '.json',
+          // '*'
+        ];
+
         // console.log(config.resolve.plugins);
         // config.resolve.plugins = [
         //   ...(config.resolve.plugins || []),
-        //   new TsconfigPathsPlugin({ /*configFile: "./path/to/tsconfig.json" */ })
+        //   new TsconfigPathsPlugin({ /*configFile: "./path/to/tsconfig.base.json" */ })
         // ];
 
-        // console.log(config.resolve.extensions);
+        // // console.log(config.resolve.extensions);
         // config.resolve.alias = {
         //   ...config.resolve.alias,
         //   // Will make webpack look for these modules in parent directories
-        //   '@chatapp/foo': require.resolve('@chatapp/foo'),
-        //   '@chatapp/bar': require.resolve('@chatapp/bar'),
-        //   '@chatapp/biz': require.resolve('@chatapp/biz'),
+        //   '@chatapp/foo': path.resolve(__dirname, '../foo/src'),
+        //   '@chatapp/bar': path.resolve(__dirname, '../bar/src'),
+        //   '@chatapp/biz': path.resolve(__dirname, '../biz/src'),
+        //   // '@chatapp/bar': require.resolve('@chatapp/bar'),
+        //   // '@chatapp/biz': require.resolve('@chatapp/biz'),
         // };
 
         return config

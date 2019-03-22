@@ -1,11 +1,10 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
       "@chatapp/*": ["../*/src"]
-    },
-    "lib": ["es7"]
+    }
   },
   "include": ["src"]
 }

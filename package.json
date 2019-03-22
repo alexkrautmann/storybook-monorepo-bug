@@ -6,6 +6,7 @@
     ]
   },
   "scripts": {
+    "test": "jest --no-cache",
     "web:dev": "yarn --cwd packages/web-app dev",
     "web:build": "yarn --cwd packages/web-app build",
     "web:start": "yarn --cwd packages/web-app start",

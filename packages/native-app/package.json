@@ -65,6 +65,7 @@
     "@types/react-native": "0.57.38",
     "@types/react-native-navigation": "2.0.0",
     "@types/react-test-renderer": "16.8.1",
+    "@types/styled-components": "^4.1.12",
     "babel-jest": "24.3.1",
     "babel-plugin-styled-components": "^1.10.0",
     "detox": "10.0.12",
@@ -83,33 +84,6 @@
     "react-test-renderer": "16.8.4",
     "ts-jest": "24.0.0",
     "typescript": "3.3.3333"
-  },
-  "jest": {
-    "preset": "react-native",
-    "setupFiles": [
-      "<rootDir>/scripts/jest-setup.js"
-    ],
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest",
-      "^.+\\.jsx?$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
-      "^.+\\.css$": "<rootDir>/scripts/jest-css.js"
-    },
-    "modulePaths": [
-      "<rootDir>"
-    ],
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "<rootDir>/e2e/"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
   },
   "detox": {
     "test-runner": "jest",

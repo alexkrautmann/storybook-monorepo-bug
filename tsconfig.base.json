@@ -4,25 +4,23 @@
     "noEmit": true,
     "baseUrl": "./",
     "paths": {
-      "@chatapp/*": ["packages/*/src"],
+      "@chatapp/*": ["packages/*/src"]
 //      "*": ["node_modules", "packages"]
     },
-
     "target": "es5",
     "module": "commonjs",
     "jsx": "react",
-    "allowJs": true,
+//    "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "lib": ["es7"]
+    "lib": ["es2017"]
   },
-  "include": ["packages"],
-  "exclude": [
-    "node_modules",
-    "**/node_modules/**/*",
-    "**/node_modules/*",
-    // TODO: temp disable tsc for native app
-    "packages/native-app"
-  ]
+//  "include": ["packages"],
+//  "exclude": [
+//    "node_modules",
+//    "**/node_modules/**/*",
+//    "**/node_modules/*",
+//    // TODO: temp disable tsc for native app
+//    "packages/native-app"
+//  ]
 }

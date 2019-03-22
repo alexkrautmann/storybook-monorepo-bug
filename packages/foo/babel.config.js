@@ -5,11 +5,9 @@ module.exports = function(api) {
 
   const config = getBabelConfig(__dirname);
 
-  config.presets.push([
-    'next/babel'
-  ]);
-
-  config.plugins.push('styled-components');
+  // config.presets.push('@babel/preset-react');
+  //
+  // config.plugins.push('styled-components');
 
   return config;
 };
