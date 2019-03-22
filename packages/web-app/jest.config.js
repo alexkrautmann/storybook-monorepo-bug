@@ -1,7 +1,2 @@
-const pkg = require('./package');
-
-module.exports = {
-    displayName: pkg.name,
-    testMatch: ['<rootDir>/src/**/?(*.)spec.[jt]s?(x)'],
-    rootDir: './',
-};
+const { getJestConfig } = require('../../tools/getJestConfig');
+module.exports = getJestConfig({ projectDir: __dirname });
