@@ -172,16 +172,40 @@ const moduleBlacklist = alternateRoots.map(
 if (alternateRoots && alternateRoots.length)
   console.log('Found alternate project roots: ', alternateRoots);
 
+// module.exports = {
+//   resolver: {
+//     blacklistRE: blacklist(moduleBlacklist),
+//     extraNodeModules,
+//     "sourceExts": [
+//       "ts",
+//       "tsx",
+//       "js",
+//       "jsx",
+//       "json",
+//       "css",
+//       "scss"
+//     ],
+//     enableVisualizer: true
+//   },
+//   "transformer": {
+//     "babelTransformerPath": "react-native-ueno-css-modules/transformer"
+//   },
+//   watchFolders: alternateRoots,
+//   serializer: {
+//     getPolyfills: getPolyfillHelper()
+//   }
+// };
+
 module.exports = {
   resolver: {
     blacklistRE: blacklist(moduleBlacklist),
     extraNodeModules,
     "sourceExts": [
+      "ts",
+      "tsx",
       "js",
       "jsx",
       "json",
-      "ts",
-      "tsx",
       "css",
       "scss"
     ],
