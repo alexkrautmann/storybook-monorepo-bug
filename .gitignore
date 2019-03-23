@@ -23,3 +23,6 @@ node_modules/
 
 # package dist
 dist/
+
+# package reports
+reports/
