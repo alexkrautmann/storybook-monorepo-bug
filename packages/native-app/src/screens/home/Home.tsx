@@ -21,6 +21,7 @@ export const HomeScreen = ({ componentId }: any) => {
         <Image style={s.logo} source={Logo} resizeMode="contain" />
 
         <Text style={s.text}>Welcome Home {foo}</Text>
+        {/*<Text style={s.text}>Welcome Home</Text>*/}
       </View>
 
       <Button onPress={onCounterScreenPress} title="Counter Screen" />

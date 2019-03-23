@@ -55,6 +55,7 @@ function getBabelConfig2({ babelTarget = 'library' } = {}) {
   const plugins = [
     ['styled-components']
   ];
+  let sourceMaps = false;
 
   if (isWeb) {
     presets.push(["next/babel", { "preset-env": babelPresetEnvOptions }]);
@@ -66,11 +67,13 @@ function getBabelConfig2({ babelTarget = 'library' } = {}) {
     presets.push(['module:metro-react-native-babel-preset']);
     // TODO: is decorators plugin needed?
     plugins.push(['@babel/plugin-proposal-decorators', { legacy: true }]);
+    sourceMaps = 'inline';
   }
 
   return {
     presets,
     plugins,
+    // sourceMaps
     // babelrcRoots: [`${__dirname}/packages/*`]
   };
 }
