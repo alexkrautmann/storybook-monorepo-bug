@@ -2,6 +2,7 @@ import React from 'react';
 import { Image, Text, View } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import { foo } from '@chatapp/foo';
+import { Bar } from '@chatapp/bar';
 import Logo from '../../assets/images/logo.png';
 import { Button } from '../../components/button/Button';
 import { COUNTER } from '../index';
@@ -21,7 +22,8 @@ export const HomeScreen = ({ componentId }: any) => {
         <Image style={s.logo} source={Logo} resizeMode="contain" />
 
         <Text style={s.text}>Welcome Home {foo}</Text>
-        {/*<Text style={s.text}>Welcome Home</Text>*/}
+
+        <Bar/>
       </View>
 
       <Button onPress={onCounterScreenPress} title="Counter Screen" />
