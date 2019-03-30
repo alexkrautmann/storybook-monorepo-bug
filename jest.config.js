@@ -17,9 +17,9 @@ const coverageConfig = {
 module.exports = {
     "projects": [
         // "<rootDir>",
-        "<rootDir>/packages/*",
+        "<rootDir>/packages/modules/*",
         // "<rootDir>/packages/*",
     ],
-    // testPathIgnorePatterns: ["<rootDir>/packages/native-app", "/node_modules/"],
+    testPathIgnorePatterns: ["<rootDir>/packages-old", "/node_modules/"],
     ...(collectCoverage ? coverageConfig : {}),
 };

@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@chatapp/*": ["../*/src"]
+      "@chatapp/*": ["../../modules/*/src", "../../config/*"]
     }
   },
   "include": ["src"]

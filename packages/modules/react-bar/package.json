@@ -8,7 +8,8 @@
   "scripts": {
     "build": "FORCE_COLOR=1 rollup -c",
     "watch": "FORCE_COLOR=1 rollup -c -w",
-    "typecheck": "tsc --pretty"
+    "typecheck": "tsc --pretty",
+    "test": "jest"
   },
   "peerDependencies": {
     "react": "^16.8.6",
@@ -18,13 +19,14 @@
     "react-dom": "^16.8.6",
     "react-native": "^0.59.2"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@chatapp/jest-config": "^0.0.0",
     "@chatapp/rollup-config": "*",
     "@types/jest": "^24.0.11",
     "@types/react": "^16.8.10",
     "@types/react-dom": "^16.8.2",
     "@types/styled-components": "^4.1.12",
+    "jest": "^24.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "rollup": "^1.7.4",

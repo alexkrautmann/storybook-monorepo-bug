@@ -5,7 +5,6 @@ const { getBabelConfig } = require('@chatapp/babel-config');
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-// TODO: this is still bundling deps- autoExternal not working? if it works I don't need commonjs
 function getRollupConfig(modulePath) {
   const pkg = require(`${modulePath}/package.json`);
 
