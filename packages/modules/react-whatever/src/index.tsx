@@ -6,4 +6,4 @@ const Text = styled.div`
   font-weight: bold;
 `;
 
-export const Whatever = () => <Text>bar</Text>
+export const Whatever = () => <Text>Whatever</Text>

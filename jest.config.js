@@ -20,6 +20,6 @@ module.exports = {
         "<rootDir>/packages/modules/*",
         // "<rootDir>/packages/*",
     ],
-    testPathIgnorePatterns: ["<rootDir>/packages-old", "/node_modules/"],
+    testPathIgnorePatterns: ["/node_modules/"],
     ...(collectCoverage ? coverageConfig : {}),
 };
