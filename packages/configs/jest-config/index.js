@@ -16,7 +16,7 @@ function getJestConfig(projectDir) {
       '@chatapp/(.+)': '<rootDir>/../$1/src',
       // latest react-native and react-native-web renamed this file
       // todo: put a PR into react-primitives for this?
-      'react-native-web/dist/cjs/exports/StyleSheet/ReactNativeStyleResolver': 'react-native-web/dist/cjs/exports/StyleSheet/styleResolver.js',
+      // 'react-native-web/dist/cjs/exports/StyleSheet/ReactNativeStyleResolver': 'react-native-web/dist/cjs/exports/StyleSheet/styleResolver.js',
       // these polyfills might not be brought in properly in a package or it's deps, so point them to jest-config's deps
       'core-js/modules/(.+)': `${__dirname}/node_modules/core-js/modules/$1`,
       'regenerator-runtime/(.+)': `${__dirname}/node_modules/regenerator-runtime/$1`,

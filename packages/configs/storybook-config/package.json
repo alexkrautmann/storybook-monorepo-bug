@@ -1,0 +1,23 @@
+{
+  "name": "@chatapp/storybook-config",
+  "version": "0.0.0",
+  "scripts": {
+    "storybook": "start-storybook -p 1337 -c .",
+    "build-storybook": "build-storybook -c ."
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@chatapp/babel-config": "0.0.0",
+    "@storybook/react": "5.0.6",
+    "@storybook/theming": "5.0.6",
+    "@types/storybook__react": "^4.0.1",
+    "babel-loader": "^8.0.5",
+    "react-docgen-typescript-loader": "^3.0.1",
+    "typescript": "^3.4.1"
+  }
+}

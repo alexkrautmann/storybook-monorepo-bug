@@ -11,8 +11,8 @@ const babelPresetEnvOptions = {
   // pull in bits you need from babel polyfill eg regeneratorRuntime etc
   useBuiltIns: 'usage',
   // todo: consider switching to external browserslist config
-  targets: { browsers: '> 0.5%, last 2 versions, Firefox ESR, not dead' },
-  corejs: '3.0.0',
+  targets: { browsers: 'cover 96%, not ie < 9, not chrome < 40' },
+  // corejs: '3.0.0',
 };
 
 function getBabelConfig({ babelTarget = 'library' } = {}) {
@@ -29,8 +29,7 @@ function getBabelConfig({ babelTarget = 'library' } = {}) {
   let sourceMaps = false;
 
   if (isWeb) {
-    presets.push(["next/babel", { "preset-env": babelPresetEnvOptions }]);
-    presets.push(['@babel/preset-react']);
+    presets.push([require.resolve('next/babel'), { 'preset-env': babelPresetEnvOptions }]);
   } else if (isLib) {
     presets.push([require.resolve('@babel/preset-env'), babelPresetEnvOptions]);
     presets.push([require.resolve('@babel/preset-react')]);
