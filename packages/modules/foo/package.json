@@ -1,0 +1,23 @@
+{
+  "name": "@chatapp/foo",
+  "version": "0.0.0",
+  "license": "ISC",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "FORCE_COLOR=1 rollup -c",
+    "watch": "FORCE_COLOR=1 rollup -c -w",
+    "typecheck": "tsc --pretty",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@chatapp/jest-config": "^0.0.0",
+    "@chatapp/rollup-config": "0.0.0",
+    "@types/jest": "^24.0.11",
+    "jest": "^24.5.0",
+    "rollup": "^1.7.4",
+    "typescript": "^3.4.1"
+  }
+}
